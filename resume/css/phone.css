@@ -1,0 +1,22 @@
+body{font-size:0.75em}
+/****** 导航条改造  ******/
+#header{width:100%;height:auto;position:relative;}
+#header header span{display:none}
+#header #nav-toggle{width:16px;height:16px;display:block;position:absolute;right:2%;top:20px;;z-index:2;cursor:pointer;}
+#header nav{display:none;}
+/******* mobileNav ********/
+.mobileNav{width:100%;display:none;background:#4ACAA8;color:#fff;height:auto;}
+.mobileNav ul li{border-bottom:0.125em solid #5CCFB0;height:3em;line-height:3em;position:relative;overflow:hidden;text-align:center;cursor:pointer;}
+.mobileNav ul li i{display:block;width:100%;height:3em;opacity:0.8;position:absolute;left:0;bottom:-3em;z-index:11;}
+.mobileNav ul li span{/*font-size:14px;*/font-size:0.875em;font-weight:700;color:#fff;font-style:normal;cursor:pointer;position:relative;z-index:22;}
+/****** con *****/
+#con .wrapper{padding-right:0;}
+/*.main .container p{font-weight:600;}*/
+/***** section two *****/
+#two ul li{width:100%;margin-right:0;}
+#two ul li a{margin-right:3%}
+/***** section three *****/
+#three ul li{width:100%}
+#three ul li .pic-box{height:100%}
+/**** 模态窗口******/
+.win-up{height:30%;}

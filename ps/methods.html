@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>家具照明解决方案</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+       $(function (){
+       	 var indexm
+       	 var z_index=100;
+       	 $('.methods-pic ul li:first').show();
+       	 $('.methods .list li').mouseover(function(event) {
+       	 	indexm=$(this).index();
+       	 	$('.methods .list li').eq(indexm).addClass('current').siblings('li').removeClass('current');
+       	 	$('.scrollbar').stop().animate({left:indexm *120}, 200);
+       	 	z_index++;
+       	 	$('.methods-pic ul li').eq(indexm).css({'z-index':z_index}).hide().fadeIn(1000);
+       	 });
+       })
+    </script>
+</head>
+<body>
+    <div class="moudle">
+		<div class="home-wrap">
+			<div class="head-inner">
+				<div class="head-con clearfix">
+					<div class="con-left">
+                        <div class="logo"><h3><a href="">豪迈照明</a></h3></div>
+          </div>
+					<div class="con-right">
+						<div class="wrapper clearfix">
+							<div class="hotcall"><img src="images/hotcall.png"></div>
+						    <div class="head-nav">
+							    <ul>
+							    	<li><a href="index.html">豪迈首页</a><b>|</b></li>
+							    	<li ><a href="led.html">LED吸顶灯</a><b>|</b></li>
+							    	<li ><a href="product.html">产品中心</a><b>|</b></li>
+							    	<li class="current"><a href="methods.html">家居照明解决方案</a><b>|</b></li>
+							    	<li><a href="business.html">招商加盟</a><b>|</b></li>
+							    	<li><a href="">OEM</a><b>|</b></li>
+							    	<li><a href="about.html">关于豪迈</a><b>|</b></li>
+							    	<li><a href="contact.html">联系豪迈</a></li>
+							    </ul>
+						    </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- head end -->
+    <div class="search">
+    		<div class="search-inner">
+				<div class="search-con">
+				   <p class="text">
+				   	<strong>大家都在搜:</strong>
+				   	<a href="">LED照明</a>
+				   	<b>|</b>
+				   	<a href="">LED吸顶灯</a>
+				   	<b>|</b>
+				   	<a href="">LED支架灯</a>
+				   	<b>|</b>
+				   	<a href="">LED厨卫灯</a>
+				   	<b>|</b>
+				   	<a href="">LED筒射灯</a>
+				   </p> 
+				   <div class="search">
+				   	  <input type="text" placeholder="请输入搜索内容"><button></button>
+				   </div>
+			 </div>
+			</div>
+    </div>
+    <!-- search end-->
+    <div class="banner">
+    	<a href=""><img src="images/led/led_banner.jpg"></a>
+    </div>
+    <!-- banner end -->
+    <div class="methods">
+    	<div class="methods-wrap">
+    		<div class="title">
+    			<h3>家具照明解决方案</h3>
+                <p>豪迈照明以独特的灯具设计，领先的光学应用，倾力打造整体家居照明方案，营造舒适健康的光环境，让您的生活简单，愉快，更添乐趣。</p>
+    		</div> 
+    		<div class="methods-con">
+	    		<ol class="list clearfix">
+	    			<li>客厅</li>
+	    			<li>卧室</li>
+	    			<li>儿童房</li>
+	    			<li>厨房</li>
+	    			<li>卫生间</li>
+	    			<li>阳台</li>
+	    			<li>玄关过道</li>
+	    		</ol>
+	    		<div class="scrollbar"></div>	
+    		</div>
+    		<div class="methods-pic clearfix">
+	 			<ul class="clearfix">
+	 				<li><img src="images/methods/b1.jpg" alt=""></li>
+	 				<li><img src="images/methods/b2.jpg" alt=""></li>
+	 				<li><img src="images/methods/b3.jpg" alt=""></li>
+	 				<li><img src="images/methods/b4.jpg" alt=""></li>
+	 				<li><img src="images/methods/b5.jpg" alt=""></li>
+	 				<li><img src="images/methods/b6.jpg" alt=""></li>
+	 				<li><img src="images/methods/b7.jpg" alt=""></li>
+	 			</ul>
+    		</div> 		
+    	</div>
+    </div>
+
+    <div class="moudle">
+	    <div class="footer-wrap">
+	      <div class="footer-inner">
+	        <div class="footer-con clearfix">
+	              <div class="footer-link">
+	                <h4 class="logo"><img src="images/link.gif"></h4>
+	                <div class="btn">友链申请入口</div>
+	                <p>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                </p>
+	              </div>
+	              <div class="footer-nav">
+	                <h4 class="logo"><img src="images/f_nav.gif"></h4>
+	                <div class="btn">+底部导航</div>
+	                <p>
+	                  <a href="about.html">关于豪迈</a>
+	                  <a href="">LED吸灯</a>
+	                  <a href="">产品中心</a>
+	                  <a href="">家具照明解决方案</a>
+	                  <a href="business.html">招商加盟</a>
+	                  <a href="">豪迈OEM</a>
+	                  <a href="">网站地图</a>
+	                  <a href="contact.html">练习豪迈</a>
+	                </p>
+
+	              </div>
+	              <div class="footer-contact">
+	                <h3 class="logo"><a href=""><img src="images/f_logo.gif"></a></h3>
+	                <ul>
+	                  <li>江苏豪迈照明科技有限公司版权所有 备案号 ：苏ICP备10208523号</li>
+	                  <li>豪迈服务热线：400-850-6277 / 传真 ：0515-82222277</li>
+	                  <li>邮箱：zhengshuang@163.com / 地址： 天津宝坻区九园工业经济开发区999号</li>
+	                  <li>技术支持：淘宝网</li>
+	                </ul>
+	              </div>
+	        </div>
+	        
+	      </div>
+	    </div>
+    </div>
+    <!-- footer end  -->
+</body>
+</html>

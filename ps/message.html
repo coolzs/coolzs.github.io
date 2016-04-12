@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>给我留言</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+        $(function(){
+          $('.user-name').blur(function(e) {
+			 $(this).next().remove();
+			  if((/^[a-zA-Z0-9_-]{6,18}$/).test($(this).val())){
+				  var tag=$('<span class="success">恭喜此用户可以注册！</span>');
+				  $(this).after(tag);
+			  }else if($(this).val()==''){
+				  $(this).after('<span class="fail">输入不能为空！</span>');
+			  }else{
+				  $(this).after('<span class="fail">请输入6-18位的数字或者字母！</span>');
+			  }
+          });
+		  $('.user-pwd').blur(function(e) {
+			  $(this).next().remove();
+              if((/^[a-zA-Z0-9_-]{6,18}$/).test($(this).val())){
+				 $(this).after('<span class="success">恭喜此用户可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">密码输入不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">请输入6-18位的数字或者字母！</span>');
+			  }
+          });
+		 $('.user-pwd2').blur(function(e) {
+			  $(this).next().remove();
+              if((/^[a-zA-Z0-9_-]{6,18}$/).test($(this).val())&& $(this).val()==$('.user-pwd').val()){
+				 $(this).after('<span class="success">恭喜此用户可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">确认密码输入不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">两次输入的密码不一致</span>');
+			  }
+          });
+		  $('.user-email').blur(function(e) {
+			  $(this).next().remove();
+              if((/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/).test($(this).val())){
+				 $(this).after('<span class="success">邮箱可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">电子邮箱输入不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">请书写正确的邮箱格式！</span>');
+			  }
+          });
+		  $('.user-phone').blur(function(e) {
+			  $(this).next().remove();
+              if((/^((13[0-9])|(15[^4,\D])|(18[0,5-9]))\d{8}$/).test($(this).val())){
+				 $(this).after('<span class="success">手机号码可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">移动电话不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">请输入正确的手机号码！</span>');
+			  }
+          });
+		   $('.user-ID').blur(function(e) {
+			  $(this).next().remove();
+              if((/^((13[0-9])|(15[^4,\D])|(18[0,5-9]))\d{8}$/).test($(this).val())){
+				 $(this).after('<span class="success">身份证号可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">身份证号不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">请输入正确的身份证号！</span>');
+			  }
+          });
+		  $('.user-IC').blur(function(e) {
+			  $(this).next().remove();
+              if((/^\d{19}$/).test($(this).val())){
+				 $(this).after('<span class="success">银行卡号可以注册！</span>'); 
+			  }else if($(this).val()==''){
+				 $(this).after('<span class="fail">银行卡号不能为空！</span>');
+			  }else{
+			     $(this).after('<span class="fail">请输入正确的银行卡号！</span>');
+			  }
+          });
+		  
+        })
+	</script>
+</head>
+<body>
+<div class="moudle">
+		<div class="home-wrap">
+			<div class="head-inner">
+				<div class="head-con clearfix">
+					<div class="con-left">
+                        <div class="logo"><h3><a href="">豪迈照明</a></h3></div>
+          </div>
+					<div class="con-right">
+						<div class="wrapper clearfix">
+							<div class="hotcall"><img src="images/hotcall.png"></div>
+						    <div class="head-nav">
+							    <ul>
+							    	<li><a href="index.html">豪迈首页</a><b>|</b></li>
+							    	<li ><a href="led.html">LED吸顶灯</a><b>|</b></li>
+							    	<li ><a href="product.html">产品中心</a><b>|</b></li>
+							    	<li ><a href="methods.html">家居照明解决方案</a><b>|</b></li>
+							    	<li><a href="business.html">招商加盟</a><b>|</b></li>
+							    	<li><a href="">OEM</a><b>|</b></li>
+							    	<li ><a href="about.html">关于豪迈</a><b>|</b></li>
+							    	<li class="current"><a href="contact.html">联系豪迈</a></li>
+							    </ul>
+						    </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- head end -->
+    <div class="search">
+    		<div class="search-inner">
+				<div class="search-con">
+				   <p class="text">
+				   	<strong>大家都在搜:</strong>
+				   	<a href="">LED照明</a>
+				   	<b>|</b>
+				   	<a href="">LED吸顶灯</a>
+				   	<b>|</b>
+				   	<a href="">LED支架灯</a>
+				   	<b>|</b>
+				   	<a href="">LED厨卫灯</a>
+				   	<b>|</b>
+				   	<a href="">LED筒射灯</a>
+				   </p> 
+				   <div class="search">
+				   	  <input type="text" placeholder="请输入搜索内容"><button></button>
+				   </div>
+			 </div>
+			</div>
+    </div>
+    <!-- search end-->
+    <div class="banner">
+    	<a href=""><img src="images/led/about_banner.jpg"></a>
+    </div>
+    <!-- banner end -->	
+    <div class="con clearfix">
+    	<div class="left">
+		   <div class="left_con">
+		   	   <h3 class="form_title">用户注册信息</h3>
+		        <div class="form">
+				    <dl>
+						<dt>用户名:</dt>
+						<dd>
+			                <input type="text" class="user-name">
+			            </dd>
+			            <dt>密码:</dt>
+						<dd>
+			                <input type="password" class="user-pwd">
+			            </dd>
+			            <dt>确认密码:</dt>
+						<dd>
+			                <input type="password" class="user-pwd2">
+			            </dd>
+			            <dt>电子邮箱:</dt>
+			            <dd><input type="email" class="user-email"></dd>
+			            <dt>移动电话:</dt>
+			            <dd><input type="text" class="user-phone"></dd>
+			            <dt>身份证号:</dt>
+			            <dd><input type="text" class="user-ID"></dd>
+			            <dt>银行卡号:</dt>
+			            <dd><input type="text" class="user-IC"></dd>
+				    </dl>
+			    </div>
+    		</div>
+    	</div>
+    	<div class="right ">
+    		<div class="right_t">
+    			<div class="right_t">
+    			<h3>关于豪迈</h3>
+    			<span ><a href="about.html">豪迈简介</a></span>
+    			<span><a href="business.html">招商加盟</a></span>
+    			<span><a href="">豪迈0EM</a></span>
+    			<span><a href="certificate.html">荣誉资质</a></span>
+    			<span><a href="contact.html">联系豪迈</a></span>
+    			<span  class="on"><a href="message.html">豪迈留言</a></span>
+    		</div>
+    		</div>
+    		<div class="right_b">
+    			<h3>联系豪迈</h3>
+    			<div class="tupian">
+    				豪迈服务热线<em>400-850-6277</em>
+    			</div>
+    			<p>
+    				<span>电话：0515-86222222</span>
+    				<span>QQ:1617544116</span>
+    				<span>邮箱：coolzs@163.com</span>
+    				<span>天津宝坻区九园经济技术开发区</span>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    <!-- con end -->
+    <div class="moudle">
+	    <div class="footer-wrap">
+	      <div class="footer-inner">
+	        <div class="footer-con clearfix">
+	              <div class="footer-link">
+	                <h4 class="logo"><img src="images/link.gif"></h4>
+	                <div class="btn">友链申请入口</div>
+	                <p>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                </p>
+	              </div>
+	              <div class="footer-nav">
+	                <h4 class="logo"><img src="images/f_nav.gif"></h4>
+	                <div class="btn">+底部导航</div>
+	                <p>
+	                  <a href="">关于豪迈</a>
+	                  <a href="">LED吸灯</a>
+	                  <a href="">产品中心</a>
+	                  <a href="">家具照明解决方案</a>
+	                  <a href="">招商加盟</a>
+	                  <a href="">豪迈OEM</a>
+	                  <a href="">网站地图</a>
+	                  <a href="">练习豪迈</a>
+	                </p>
+
+	              </div>
+	              <div class="footer-contact">
+	                <h3 class="logo"><a href=""><img src="images/f_logo.gif"></a></h3>
+	                <ul>
+	                  <li>江苏豪迈照明科技有限公司版权所有 备案号 ：苏ICP备10208523号</li>
+	                  <li>豪迈服务热线：400-850-6277 / 传真 ：0515-82222277</li>
+	                  <li>邮箱：zhengshuang@163.com / 地址： 天津宝坻区九园工业经济开发区999号</li>
+	                  <li>技术支持：淘宝网</li>
+	                </ul>
+	              </div>
+	        </div>
+	        
+	      </div>
+	    </div>
+    </div>
+    <!-- footer end  -->	
+</body>
+</html>

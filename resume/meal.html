@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴效果图美食</title>
+	<style type="text/css">
+     *{margin:0;padding:0;list-style:none;}
+     .shoufengqin{width:710px;height:267px;margin:0 auto;overflow:hidden;}
+     .shoufengqin ul{width:10000px;}
+     .shoufengqin li{float:left;width:142px;height:267px;overflow:hidden;position:relative;}
+     .shoufengqin span{width:440px;padding:15px;display:block;background:rgba(0,0,0,0.6);color:#fff;font-weight:700;line-height:30px;overflow:hidden;position:absolute;left:0;bottom:0;display:none;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+     $(function(){
+     	$('.shoufengqin ul li').mouseover(function(event) {
+     	    $(this).stop().animate({width:440}, 500).siblings().stop().animate({width:67.5}, 500);
+     		$(this).children('span').show();
+     	}).mouseout(function(event) {
+     		$('.shoufengqin ul li').stop().animate({width:142}, 500);
+            $(this).children('span').hide();
+     	});
+     })
+	</script>
+</head>
+<body>
+	<div class="shoufengqin">
+		<ul class="clearfix">
+			<li><img src="image/meal/egg.jpg" alt="">
+                <span>小熊鸡蛋卷，吃了之后，都喜欢睡觉！</span>
+			</li>
+			<li><img src="image/meal/makalong.jpg" alt="">
+                <span>小熊鸡蛋卷，吃了之后，都喜欢睡觉！</span>
+			</li>
+			<li><img src="image/meal/Italimian.jpg" alt="">
+                <span>小熊鸡蛋卷，吃了之后，都喜欢睡觉！</span>
+			</li>
+			<li><img src="image/meal/starwberry.jpg" alt="">
+                <span>小熊鸡蛋卷，吃了之后，都喜欢睡觉！</span>
+			</li>
+			<li><img src="image/meal/ice_cream.jpg" alt="">
+                <span>小熊鸡蛋卷，吃了之后，都喜欢睡觉！</span>
+			</li>
+	    </ul>
+	</div>
+	
+</body>
+</html>

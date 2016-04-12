@@ -1,0 +1,44 @@
+/****** 导航条改造  ******/
+#header{width:30%;}
+#header header{padding:1%;}
+#header header span{width:6em;height:6em;}
+#header header .pic1, #header header .pic2{height:6em;background-size:cover;}
+#header #logo{font-size:130%;}
+#header {font-size:100%;}
+#header #nav-toggle{display:none;}
+#header nav{margin-top:20px;display:block;}
+/******* mobileNav ********/
+.mobileNav{display:none;}
+/****** con *****/
+#con .wrapper{padding-right:30%;}
+/**** section one******/
+#one:before{content:'';height:12em;}
+.main .container{padding:10px 0;width:90%;}
+.main #one .container h2{font-size:300%;}
+.main #one .container h2.oneTitle{font-size:2em;text-shadow:none;font-weight:bold;}
+.main .container header p{line-height:1.5em;font-size:140%;}
+.main .container header p.oneP{font-size:1.35em;line-height:;}
+/**** section two ****/
+#two ul li{font-size:0.8em;}
+#two ul li img{margin-right:1%;}
+#two ul li a{margin-right:1%;}
+#two ul li i{margin-right:1%;}
+#two ul li span{display:none;}
+/**** section three ****/
+#three ul li .pic{height:100%;overflow:hidden;}
+/**** 模态窗口******/
+.win-up{width:70%;height:50%;}
+/**** section four *****/
+#four .videoDiv video{width:98%;height:auto;}
+/****section five  *****/
+#five p{line-height:1.8em;}
+#five .p1 img,#five .p3 img{width:23%;}
+.main .container p{margin-bottom:1%;}
+/****section six ******/
+.shoufengqin{display:none;}
+.all { width: 100%; height: auto;display:block; padding: 5px; overflow: hidden; margin: 0 auto; border:1px solid #ccc; position:relative; box-sizing:border-box;}
+.all ul li { width: 100%; height: auto; display: none; }
+.all ul li img{width:100%;height:auto;}
+.all ol { position: absolute; bottom: 10px; right: 10px; }
+.all ol li { float: left; width: 20px; height:20px; line-height: 20px; text-align:center; background:#fff; margin-left: 10px; cursor:pointer; }
+.all ol .current { background: yellow; }

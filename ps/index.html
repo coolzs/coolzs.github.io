@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>家具装饰</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+       $(function(){
+       	 var win_width=$(window).width();
+       	 var index=0;
+       	 var z_index=100;
+       	  function pic_show(){
+       	 	$('.index-banner ol li').eq(index).addClass('current').siblings().removeClass();
+       	 	 z_index++;
+       	 	 $('.index-banner ul li').eq($(this).index()).css({left:win_width,'z-index':z_index}).stop().animate({left:0},800);
+       	  }
+       	 //移到脚标上显示对应的图片与对应的脚标；
+       	 $('.index-banner ol li').mouseover(function(event) {
+       	 	index=$(this).index();
+       	 	pic_show();
+       	 });
+       	 //实现上下按钮的功能；
+       	 $('.index-banner span.btn-left').click(function(event) {
+       	 	index--;
+       	 	if(index<0){
+       	 		index=1;
+       	 	}
+            pic_show();
+       	 });
+        $('.index-banner span.btn-right').click(function(event) {
+       	 	index++;
+       	 	if(index>1){
+       	 		index=0;
+       	 	}
+            pic_show();
+       	 });
+        //设置定时器轮播；
+        var timer01=null;
+        var timer02=null;
+        clearInterval(timer01);
+            timer01=setInterval(function(){
+            	index++;
+            	if(index>1){
+       	 		index=0;
+       	 	    }
+                pic_show();
+            },2000);
+        //当鼠标移到banner上，清除定时器;鼠标离开，继续定时器；
+       	 $('.index-banner').mouseenter(function(event) {
+       	 	clearInterval(timer01);
+       	 	//icon飞入
+       	 	$('.index-banner i').css({left:win_width}).stop().fadeIn().animate({left:200},1000);
+       	 }).mouseleave(function(event) {
+       	 	/*clearTimeout(timer02);*/
+       	 	$('.index-banner i').css({left:200}).stop().fadeOut(500).animate({left:win_width},1000);
+       	 	clearInterval(timer01);
+            timer01=setInterval(function(){
+            	index++;
+            	if(index>1){
+       	 		index=0;
+       	 	    }
+                pic_show();
+            },2000);
+       	 });
+        
+
+       	 /*********淡入淡出效果轮播图  ********/
+
+       	 $('.con2 ol li').mouseover(function(event) {
+       	 	index=$(this).index();
+       	 	$('.con2 ol li').eq(index).addClass('current').siblings().removeClass('current');
+       	 	z_index++;
+       	 	$('.produce-wrap .produce-list').eq(index).css({'z-index':z_index}).hide().stop().fadeTo(1000,1);
+       	 });
+         /********con3 的内容部分*******/
+         $('#box-con1 ol li').mouseover(function(event) {
+           index=$(this).index();
+           $('#box-con1 ol li').eq(index).addClass('current').siblings().removeClass('current');
+           $('#box-con1 ul').stop().animate({left:-470*index}, 1000);
+         });
+         $('#box-con2 ol li').mouseover(function(event) {
+           index=$(this).index();
+           $('#box-con2 ol li').eq(index).addClass('current').siblings().removeClass('current');
+           $('#box-con2 ul').stop().animate({left:-470*index}, 1000);
+         });
+		 /****** search *********/
+		 $('#myInput').focus(function(e) {
+            if($('#myInput').val()=='请输入搜索内容'){
+				$('#myInput').attr('value','');
+				$(this).css('color','#333');
+			}
+         }).blur(function(e) {
+            if($('#myInput').val()==''){
+			    $('#myInput').attr('value','请输入搜索内容');
+				$('#myInput').css('color','#999');
+			}
+        });
+       })
+	</script>
+</head>
+<body>
+	<div class="moudle">
+		<div class="home-wrap">
+			<div class="head-inner">
+				<div class="head-con clearfix">
+					<div class="con-left">
+                        <div class="logo"><h3><a href="">豪迈照明</a></h3></div>
+          </div>
+					<div class="con-right">
+						<div class="wrapper clearfix">
+							<div class="hotcall"><img src="images/hotcall.png"></div>
+						    <div class="head-nav">
+							    <ul>
+							    	<li class="current"><a href="index.html">豪迈首页</a><b>|</b></li>
+							    	<li><a href="led.html">LED吸顶灯</a><b>|</b></li>
+							    	<li><a href="product.html">产品中心</a><b>|</b></li>
+							    	<li><a href="methods.html">家居照明解决方案</a><b>|</b></li>
+							    	<li><a href="business.html">招商加盟</a><b>|</b></li>
+							    	<li><a href="">OEM</a><b>|</b></li>
+							    	<li><a href="about.html">关于豪迈</a><b>|</b></li>
+							    	<li><a href="contact.html">练习豪迈</a></li>
+							    </ul>
+						    </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--head end-->
+	<div class="moudle">
+		<div class="index-banner">
+			<div class="banner-nav">
+				<ul >
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</ul>
+			</div>
+			<ol>
+				<li class="current"></li>
+				<li></li>
+			</ol>
+			<span class="btn-left"><i></i></span>
+			<span class="btn-right"><i></i></span>
+			<i class="icon"></i>
+		</div>
+	</div>
+	<!--.banner end-->
+	<div class="moudle">
+		<div class="search-wrapper">
+			<div class="search-inner">
+				<div class="search-con">
+				   <p class="text">
+				   	<strong>大家都在搜:</strong>
+				   	<a href="">吸顶灯</a>
+				   	<b>|</b>
+				   	<a href="">LED吸顶灯</a>
+				   	<a href="">家居照明</a>
+				   	<a href="">卧室吸顶灯</a>
+				   	<a href="">LED生产厂家</a>
+				   </p> 
+				   <div class="search">
+				   	  <input id="myInput" type="text" value="请输入搜索内容"><button id="myBtn"></button>
+				   </div>
+			 </div>
+			</div>
+		</div>
+	</div>
+	<!--.search end-->
+	<div class="moudle">
+		<div class="con-wrapper">
+			<div class="con-inner">
+				<div class="con-top">
+					<div class="title"><img src="images/con-title01.jpg"></div>
+				</div>
+				<div class="con-bottom">
+					<ul class="clearfix">
+						<li><div class="pic"><div class="pic-box"><a href=""><img src="images/01.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">别有洞天，雅趣无穷的会客空间</div>
+						    </div>
+						</li>
+						<li><div class="pic"><div class="pic-box"><a href=""><img src="images/02.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">让灯光成为食欲的一部分</div>
+						    </div>
+						</li>
+						<li style="margin-right:0">
+							<div class="pic"><div class="pic-box"><a href=""><img src="images/03.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">柔和，宁静，给你一个更好的睡眠</div>
+						    </div>
+						</li>
+						<li><div class="pic"><div class="pic-box"><a href=""><img src="images/04.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">健康照明，更好保障您的视力</div>
+						    </div>
+						</li>
+						<li><div class="pic"><div class="pic-box"><a href=""><img src="images/05.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">明亮舒适，老婆从此爱上厨房</div>
+						    </div>
+						</li>
+						<li style="margin-right:0"><div class="pic"><div class="pic-box"><a href=""><img src="images/06.jpg" ></a></div></div>
+							<div class="text">
+							   <h3 class="text-hd"><a href="">豪迈客厅照明应用</a></h3>
+							   <div class="text-bd">曲径通幽，完美连接五大空间</div>
+						    </div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- con1 end-->
+	<div class="moudle">
+		<div class="banner-wrapper">
+			<div class="banner2"></div>
+		</div>	
+	</div>
+	<!-- banner2 end-->
+	<div class="moudle">
+		<div class="wrap">
+			<div class="con-inner ">
+				<div class="con2">
+					<div class="logo2">
+						<h3><img src="images/title_logo.png"></h3>
+					</div>
+					<ol>
+						<li class="current" style="margin-left:0px">功能型LED吸顶灯</li>
+						<li>预约型LED吸顶灯</li>
+						<li>其他LED预约产品</li>
+					</ol>
+					<div class="produce clearfix">
+						<div class="produce-wrap clearfix">
+							<div class="produce-list">
+							    <ul>
+							        <li><div class="produce-pic"><a href=""><img src="images/produce01.jpg"></a></div><div class="produce-text"><h3><a href="">    功能性吸灯01</a></h3></div></li>
+							        <li><div class="produce-pic"><a href=""><img src="images/produce02.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">功能性吸灯02</a></h3>    </div></li>
+							        <li><div class="produce-pic"><a href=""><img src="images/produce03.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">功能性吸灯03</a></h3>    </div></li>
+						        </ul>
+						    </div>
+						    <div class="produce-list">
+							    <ul>
+							        
+							        <li><div class="produce-box"><a href=""><img src="images/produce02.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">预约型LED吸顶灯02</a></h3>    </div></li>
+							        <li><div class="produce-box"><a href=""><img src="images/produce03.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">预约型LED吸顶灯03</a></h3>    </div></li>
+							        <li><div class="produce-box"><a href=""><img src="images/produce01.jpg"></a></div><div class="produce-text"><h3><a href="">预约型LED吸顶灯01</a></h3></div></li>
+						        </ul>
+						    </div>
+						    <div class="produce-list">
+							    <ul>
+							        
+							        <li><div class="produce-box"><a href=""><img src="images/produce03.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">其他LED预约产品03</a></h3>    </div></li>
+							        <li><div class="produce-box"><a href=""><img src="images/produce01.jpg"></a></div><div class="produce-text"><h3><a href="">    其他LED预约产品01</a></h3></div></li>
+							        <li><div class="produce-box"><a href=""><img src="images/produce02.jpg"></a></div>
+							        	<div class="produce-text"><h3><a href="">其他LED预约产品02</a></h3>    </div></li>
+						        </ul>
+						    </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--con2 end-->
+	<div class="moudle">
+		<div class="banner-wrapper">
+			<div class="con-inner">
+				<div class="banner3">
+					<ol class="clearfix">
+					    <li class="current"><a href="">调色调光</a></li>
+					    <li><a href="">艺术设计</a></li>
+					    <li><a href="">智能设置</a></li>
+					    <li><a href="">节能环保</a></li>
+				    </ol>
+				</div>
+			</div>
+			<div class="banner3-box">
+				<div class="banner-pic"></div>
+				<div class="banner-con">
+					<div class="con-inner">
+						<div class="banner-con-wrap">
+							<div class="banner-con-box">
+								<div class="banner-con-pic">
+									<img src="images/banner3_pic.jpg">
+								</div>
+								<div class="banner-con-text">
+									<h3><strong>11档调色 20档调光</strong><i> 个性调光氛围，满足各种爱好</i></h3>
+									<p>根据你的喜好和季节变化，<span>黄光和白光</span>任意切换，逐层渐变，氛围随时掌控。<span>多达20档</span>的可调设置每一档调光过度自然您的眼睛得到更多的呵护。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- .banner3 end-->
+	<div class="moudle">
+		<div class="wrap2">
+			<div class="con-inner">
+				<div class="con3">
+					<div class="logo">
+						<h3><img src="images/title_logo02.png" ></h3>
+					</div>
+					<div class="con3-box clearfix">
+						<div class="box" style="margin-left:0">
+							<h3 class="box-title">
+								<div class="title">
+									•<a><span>OEM客户见证</span><i> / WITNESS</i></a>
+								</div>
+								<div class="more">
+									+更多
+								</div>
+							</h3>
+							<div class="box-con" id="box-con1">
+								<ul>
+								     <li><div class="pic"><a href=""><img src="images/con_01_07.png"></a></div>
+                                         <div class="pic-con">
+                                         	<h3>豪迈照明值得信赖</h3>
+                                         	<p>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合IS09001：2000质量管理体系标准。我们公司在挑选合作者是首先</p>
+                                         </div>
+								     </li>
+								     <li><div class="pic"><a href=""><img src="images/con_01_07.png"></a></div>
+                                         <div class="pic-con">
+                                          <h3>豪迈照明值得信赖</h3>
+                                          <p>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合IS09001：2000质量管理体系标准。我们公司在挑选合作者是首先</p>
+                                         </div>
+                     </li>
+							    </ul>
+                  <ol>
+                    <li class="current"></li>
+                    <li></li>
+                  </ol>
+							</div>	
+						</div>
+
+						<div class="box">
+							<h3 class="box-title">
+								<div class="title">
+									•<a><span>OEM客户见证</span><i> / WITNESS</i></a>
+								</div>
+								<div class="more">
+									+更多
+								</div>
+							</h3>
+							<div class="box-con" id="box-con2">
+								<ul>
+                     <li><div class="pic"><a href=""><img src="images/con_01_07.png"></a></div>
+                                         <div class="pic-con">
+                                          <h3>豪迈照明值得信赖</h3>
+                                          <p>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合IS09001：2000质量管理体系标准。我们公司在挑选合作者是首先</p>
+                                         </div>
+                     </li>
+                     <li><div class="pic"><a href=""><img src="images/con_01_07.png"></a></div>
+                                         <div class="pic-con">
+                                          <h3>豪迈照明值得信赖</h3>
+                                          <p>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合IS09001：2000质量管理体系标准。我们公司在挑选合作者是首先</p>
+                                         </div>
+                     </li>
+                  </ul>
+                  <ol>
+                    <li class="current"></li>
+                    <li></li>
+                  </ol>
+              </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- .con3 end-->
+  <div class="moudle">
+    <div class="banner4">
+      <div class="con-inner">
+        <div class="banner4-con">
+          <h3>
+          <a href="">国家最大的节能灯管生产基地</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--banner4 end-->
+  <div class="moudle">
+    <div class="wrap">
+       <div class="con-inner">
+          <div class="con4-wrap">
+                <div class="con4-top clearfix">
+                      <div class="con4-left  clearfix">
+                         <div class="title">
+                           •<a><span>走进豪迈照明</span><i> / INTO HM</i></a>
+                         </div>
+                         <div class="con4-box clearfix">
+                           <div class="pic"><a href=""><img src="images/pic5.jpg"></a></div>
+                           <div class="pic-text">
+                             <h3><a href="">豪迈简介</a></h3>
+                             <p>江苏豪迈照明有限公司创办于2003年，是一家以研发、生产、销售高效照明产品为主的民营科技企业，位于建湖-中国节能电光源制造基地——江苏省盐湖经济开发区永兴路999号，占地15万平方米，建筑面积8万平方米，现有职工2000多人。</p>
+                             <a  class="know" href=""><span>进一步认识豪迈</span></a>
+                           </div>
+                         </div>
+                      </div>
+                      <div class="con4-right">
+                          <div class="con4-right-wrap">
+                              <div class="title">•<a><span>走进豪迈照明</span><i> / INTO HM</i></a></div>
+                              <div class="more"><a href="">+更多</a></div>
+                              <div class="con">
+                                <div class="pic-scroll">
+                                  <ul>
+                                    <li><a href=""><img src="images/zhengshu.jpg" alt=""></a></li>
+                                    <li><a href=""><img src="images/zhengshu2.jpg" alt=""></a></li>
+                                  </ul> 
+                                </div>
+                                <span class="prev"></span>
+                                <span class="next"></span>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+                 <div class="con4-bottom clearfix">
+                      <div class="con4-left ht clearfix">
+                        <div class="title">
+                          <ol class="zp clearfix">
+                            <li class="current">•<a><span>走进豪迈照明</span><i> / INTO HM</i></a><b>|</b></li>
+                            <li>•<a><span>行业资讯</span><i> / INFORMATION</i></a></li>
+                          </ol>
+                         </div>
+                        <div class="con4-box-all">
+                         <div class="con4-box clearfix" id="con4-box1" style="display:block">
+                           <div class="pic"><a href=""><img src="images/pic5.jpg"></a></div>
+                           <div class="pic-text">
+                             <h3><a href="">豪迈简介</a></h3>
+                             <p>江苏豪迈照明有限公司创办于2003年，是一家以研发、生产、销售高效照明产品为主的民营科技企业，位于建湖-中国节能电光源制造基地——江苏省盐湖经济开发区永兴路999号，占地15万平方米，建筑面积8万平方米，现有职工2000多人。</p>
+                           </div>
+                           <ul class="con-list">
+                             <li><a href="">LED将成为“第五代照明”产品</a></li>
+                             <li><a href="">重庆将建我国首个医疗照明芯片基地</a></li>
+                             <li><a href="">中国LED产业预测：普通照明仍路漫漫</a></li>
+                             <li><a href="">绿色照明拉动功率器件增长 国内企业突围高端</a></li>
+                             <li><a href="">首届中国LED照明论坛在上海隆重举办</a></li>
+                             <li><a href="">中国（北京）LED照明展览会活动</a></li>
+                           </ul>
+                         </div>
+                         <div class="con4-box clearfix" id="con-box2">
+                           <div class="pic"><a href=""><img src="images/pic5.jpg"></a></div>
+                           <div class="pic-text">
+                             <h3><a href="">豪迈简介</a></h3>
+                             <p>江苏豪迈照明有限公司创办于2003年，是一家以研发、生产、销售高效照明产品为主的民营科技企业，位于建湖-中国节能电光源制造基地——江苏省盐湖经济开发区永兴路999号，占地15万平方米，建筑面积8万平方米，现有职工2000多人。</p>
+                           </div>
+                           <ul class="con-list">
+                             <li><a href="">LED将成为“第五代照明”产品</a></li>
+                             <li><a href="">重庆将建我国首个医疗照明芯片基地</a></li>
+                             <li><a href="">中国LED产业预测：普通照明仍路漫漫</a></li>
+                             <li><a href="">绿色照明拉动功率器件增长 国内企业突围高端</a></li>
+                             <li><a href="">首届中国LED照明论坛在上海隆重举办</a></li>
+                             <li><a href="">中国（北京）LED照明展览会活动</a></li>
+                           </ul>
+                         </div>
+                        </div>
+                      </div>
+                      <div class="con4-right clearfix" style="height:393px">
+                         <div class="con4-right-wrap">
+                              <div class="title">•<a><span>常见问题解答</span><i> / Q&A</i></a></div>
+                              <div class="more"><a href="">+更多</a></div>
+                              <div class="con-hd clearfix">
+                                <ul >
+                                  <li><p><b class="bg1">1</b><a href="">LED厨卫灯有什么具体的特点与优势？</a></p>
+                                      <p><b class="bg2">1</b><a href="">
+                                        豪迈厨卫灯外观超薄，透光率达指标90%以上，不易老化，纸板做和结构
+                                      </a></p>
+                                      <h4></h4>
+                                  </li>
+                                  <li><p><b class="bg1">3</b><a href="">LED厨卫灯有什么具体的特点与优势？</a></p>
+                                      <p><b class="bg2">4</b><a href="">LED厨卫灯有什么具体的特点与优势？</a></p>
+                                      <h4></h4>
+                                  </li>
+                                  <li><p><b class="bg1">5</b><a href="">LED厨卫灯有什么具体的特点与优势？</a></p>
+                                      <p><b class="bg2">6</b><a href="">LED厨卫灯有什么具体的特点与优势？</a></p>
+                                  </li>
+                                </ul>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+          </div>
+       </div>
+    </div>
+  </div>
+  <!-- con4 end-->
+  <div class="moudle">
+    <div class="footer-wrap">
+      <div class="con-inner">
+        <div class="footer-con clearfix">
+              <div class="footer-link">
+                <h4 class="logo"><img src="images/link.gif"></h4>
+                <div class="btn">友链申请入口</div>
+                <p>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                  <a href="">友情链接</a>
+                </p>
+              </div>
+              <div class="footer-nav">
+                <h4 class="logo"><img src="images/f_nav.gif"></h4>
+                <div class="btn">+底部导航</div>
+                <p>
+                  <a href="">关于豪迈</a>
+                  <a href="">LED吸灯</a>
+                  <a href="">产品中心</a>
+                  <a href="">家具照明解决方案</a>
+                  <a href="">招商加盟</a>
+                  <a href="">豪迈OEM</a>
+                  <a href="">网站地图</a>
+                  <a href="">练习豪迈</a>
+                </p>
+
+              </div>
+              <div class="footer-contact">
+                <h3 class="logo"><a href=""><img src="images/f_logo.gif"></a></h3>
+                <ul>
+                  <li>江苏豪迈照明科技有限公司版权所有 备案号 ：苏ICP备10208523号</li>
+                  <li>豪迈服务热线：400-850-6277 / 传真 ：0515-82222277</li>
+                  <li>邮箱：zhengshuang@163.com / 地址： 天津宝坻区九园工业经济开发区999号</li>
+                  <li>技术支持：淘宝网</li>
+                </ul>
+              </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

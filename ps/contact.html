@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>豪迈</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="moudle">
+		<div class="home-wrap">
+			<div class="head-inner">
+				<div class="head-con clearfix">
+					<div class="con-left">
+                        <div class="logo"><h3><a href="">豪迈照明</a></h3></div>
+          </div>
+					<div class="con-right">
+						<div class="wrapper clearfix">
+							<div class="hotcall"><img src="images/hotcall.png"></div>
+						    <div class="head-nav">
+							    <ul>
+							    	<li><a href="index.html">豪迈首页</a><b>|</b></li>
+							    	<li ><a href="led.html">LED吸顶灯</a><b>|</b></li>
+							    	<li ><a href="product.html">产品中心</a><b>|</b></li>
+							    	<li ><a href="methods.html">家居照明解决方案</a><b>|</b></li>
+							    	<li><a href="business.html">招商加盟</a><b>|</b></li>
+							    	<li><a href="">OEM</a><b>|</b></li>
+							    	<li><a href="about.html">关于豪迈</a><b>|</b></li>
+							    	<li class="current"><a href="contact.html">联系豪迈</a></li>
+							    </ul>
+						    </div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- head end -->
+    <div class="search">
+    		<div class="search-inner">
+				<div class="search-con">
+				   <p class="text">
+				   	<strong>大家都在搜:</strong>
+				   	<a href="">LED照明</a>
+				   	<b>|</b>
+				   	<a href="">LED吸顶灯</a>
+				   	<b>|</b>
+				   	<a href="">LED支架灯</a>
+				   	<b>|</b>
+				   	<a href="">LED厨卫灯</a>
+				   	<b>|</b>
+				   	<a href="">LED筒射灯</a>
+				   </p> 
+				   <div class="search">
+				   	  <input type="text" placeholder="请输入搜索内容"><button></button>
+				   </div>
+			 </div>
+			</div>
+    </div>
+    <!-- search end-->
+    <div class="banner">
+    	<a href=""><img src="images/led/contact_banner.jpg"></a>
+    </div>
+    <!-- banner end -->	
+    <div class="con clearfix">
+    	<div class="left">
+    		<div class="left_con">
+    			<h3><img src="images/business_title.jpg" alt=""></h3>
+    			<p><i>宝坻区是天津市的市辖区之一，位于中国天津市中北部、华北平原北部、燕山山脉南麓，属于华北平原北部的一部分，地处京、津、唐三角地带，临近渤海湾。</i>
+    			</p>
+    			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+        addPolyline();//向地图中添加线
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(117.546327,39.762984);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"新安镇政府",content:"电话：022-82478850<br/>邮箱：xinanzhen@126.com<br/>传真：01010107777<br/>服务热线：28397689<br/>地址：天津市宝坻区新安镇",point:"117.544701|39.763025",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//标注线数组
+    var plPoints = [{style:"solid",weight:4,color:"#f00",opacity:0.6,points:["117.543946|39.763539","117.546372|39.763566","117.546408|39.762194","117.544|39.762138","117.544|39.763539","117.544|39.763511","117.544|39.763566"]}
+		 ];
+    //向地图中添加线函数
+    function addPolyline(){
+		for(var i=0;i<plPoints.length;i++){
+			var json = plPoints[i];
+			var points = [];
+			for(var j=0;j<json.points.length;j++){
+				var p1 = json.points[j].split("|")[0];
+				var p2 = json.points[j].split("|")[1];
+				points.push(new BMap.Point(p1,p2));
+			}
+			var line = new BMap.Polyline(points,{strokeStyle:json.style,strokeWeight:json.weight,strokeColor:json.color,strokeOpacity:json.opacity});
+			map.addOverlay(line);
+		}
+	}
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+    		</div>
+    	</div>
+    	<div class="right ">
+    		<div class="right_t">
+    			<div class="right_t">
+    			<h3>关于豪迈</h3>
+    			<span><a href="about.html">豪迈简介</a></span>
+    			<span><a href="business.html">招商加盟</a></span>
+    			<span><a href="">豪迈0EM</a></span>
+    			<span><a href="certificate.html">荣誉资质</a></span>
+    			<span  class="on"><a href="contact.html">联系豪迈</a></span>
+    			<span><a href="message.html">豪迈留言</a></span>
+    		</div>
+    		</div>
+    		<div class="right_b">
+    			<h3>联系豪迈</h3>
+    			<div class="tupian">
+    				豪迈服务热线<em>400-850-6277</em>
+    			</div>
+    			<p>
+    				<span>电话：0515-86222222</span>
+    				<span>QQ:1617544116</span>
+    				<span>邮箱：coolzs@163.com</span>
+    				<span>天津宝坻区九园经济技术开发区</span>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    <!-- con end -->
+    <div class="moudle">
+	    <div class="footer-wrap">
+	      <div class="footer-inner">
+	        <div class="footer-con clearfix">
+	              <div class="footer-link">
+	                <h4 class="logo"><img src="images/link.gif"></h4>
+	                <div class="btn">友链申请入口</div>
+	                <p>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                  <a href="">友情链接</a>
+	                </p>
+	              </div>
+	              <div class="footer-nav">
+	                <h4 class="logo"><img src="images/f_nav.gif"></h4>
+	                <div class="btn">+底部导航</div>
+	                <p>
+	                  <a href="">关于豪迈</a>
+	                  <a href="">LED吸灯</a>
+	                  <a href="">产品中心</a>
+	                  <a href="">家具照明解决方案</a>
+	                  <a href="">招商加盟</a>
+	                  <a href="">豪迈OEM</a>
+	                  <a href="">网站地图</a>
+	                  <a href="">练习豪迈</a>
+	                </p>
+
+	              </div>
+	              <div class="footer-contact">
+	                <h3 class="logo"><a href=""><img src="images/f_logo.gif"></a></h3>
+	                <ul>
+	                  <li>江苏豪迈照明科技有限公司版权所有 备案号 ：苏ICP备10208523号</li>
+	                  <li>豪迈服务热线：400-850-6277 / 传真 ：0515-82222277</li>
+	                  <li>邮箱：zhengshuang@163.com / 地址： 天津宝坻区九园工业经济开发区999号</li>
+	                  <li>技术支持：淘宝网</li>
+	                </ul>
+	              </div>
+	        </div>
+	        
+	      </div>
+	    </div>
+    </div>
+    <!-- footer end  -->	
+</body>
+</html>
