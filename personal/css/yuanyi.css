@@ -1,0 +1,36 @@
+.nav .sm-item-list{border-bottom:2px solid #a9b922;margin-top:10px;}
+.nav .market-wrap{width:1190px;margin:0 auto;}
+.nav .main-list{float:left;height:35px;margin-right:28px;position:relative;white-space:nowrap;width:auto;}
+.nav .main-list li{float:left;height:35px;width:auto;display:35px;display:block;position:relative;z-index:1;}
+.nav .sm-item-list a{display:inline-block;zoom:1;height:35px;width:auto;font:bold 14px/35px '\5b8b\4f53';padding:0 15px;color:#404040;position:relative;}
+.nav .sm-cat-list{width:100%;z-index:8888;margin-top:-2px;height:2px;visibility:hidden;overflow:hidden;}
+.nav .sm-cat-list .fix-box{background-color:#a9b922;height:90px;z-index:888;position:relative;}
+.market-ext-wrap{position:relative;top:90px;}
+.market-nav-ext{background:#fff no-repeat right bottom;border:2px solid #f00d23;border-color:#9dad16;position:absolute;top:-2px;z-index:10000;}
+.market-nav-ext a{color:#666;white-space:nowrap;}
+.market-nav-ext .ext-hot{color:#a9b922;}
+.market-nav-ext .bd-fix{width:194px;background-color:#fff;position:absolute;top:-2px;left:0;height:2px;overflow:hidden;-webkit-backface-visibility:hidden;}
+.market-nav-ext .old-cat{padding:5px 10px 0 10px;margin-bottom:-5px;width:372px;overflow:hidden;display:none;}
+.market-nav-ext dl{overflow:hidden;width:285px;line-height:28px;display:block;}
+.market-nav-ext dt{color:#a9b922;display:none;float:left;margin-right:15px;font-weight:bold;}
+.market-nav-ext dt a{color:#a9b922;font-weight:bold;white-space:nowrap;}
+.market-nav-ext dd{float:left;}
+.market-nav-ext dd a{margin-right:10px;}
+.market-nav-ext .ext-wrap{height:165px;padding:5px 10px 10px 10px;width:372px;overflow:hidden;}
+
+.nav .sm-cat-list .sm-cat-list-main{height:2px;overflow:hidden;}
+.nav .sm-cat-list .sm-cat-list-main dl{border:2px solid #f00d23;border-color:#a9b922;float:left;width:184px;padding-left:10px;height:70px;padding-bottom:11px;padding-top:6px;background:url(images/05/02.png)no-repeat left center;position:relative;overflow:hidden;}
+.nav .sm-cat-list .sm-cat-list-main .cat-title{float:left;margin-right:5px;margin-left:-5px;padding:0 5px;height:24px;display:block;position:relative;border-radius:2px;color:#fff;}
+.nav .sm-cat-list .sm-cat-list-main a{display:block;color:#fff;white-space:nowrap;}
+
+
+
+
+
+
+
+
+
+
+
+

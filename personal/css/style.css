@@ -1,0 +1,124 @@
+*{margin:0;padding:0;list-style:none;outline:none;}
+body{overflow-x:hidden;}
+body,html{height:100%;}
+.bg{width:100%;height:100%;background:url(../images/bg/3.jpg) no-repeat;position:fixed;left:0;top:0; }
+.style{background-image:url(../images/bg/2.jpg);background-position:center center; }
+/******************* news  ********************/
+.clearfix:before,.clearfix:after{content:'';display:block;visibility:hidden;height:0;clear:both;}
+.clearfix{zoom:1;}
+*:before{box-sizing:border-box;}
+.section{width:1120px;margin:100px auto;background:rgba(255,255,255,0.3);position:relative;}
+.listing li.item{width:50%;padding:0 0 0 10px;float:left;position:relative;box-sizing:border-box;}
+.listing .alt{padding:0 10px 0 0;clear:left;}
+.listing li .article{}
+.listing .article .figure{width:250px;height:250px;margin:110px 0 25px;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+.listing .article .container{position:absolute;top:10px;right:10px;width:80%;}
+.listing .article .header{background:rgba(255,255,255,0.8);padding:0 15px 65px 15px;}
+p,h1,h2,h3,h4,h5,h6{font-size:1.2em;font-family:tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;color:#474b5a;}
+a,a:visited{color:#474b5a;opacity:1;text-decoration:none;transition:opacity 150ms,color 250ms;}
+a:hover{opacity:0.5;}
+.listing .article .content{margin:-65px 3% 0 7%;padding:8px 12px;font-size:1.1em;}
+.listing .article .footer{padding-top:20px;overflow:hidden;}
+.listing .footer .meta{float:left;font-style:italic;}
+.listing .footer .meta .time{font-size:100%;font-weight:400;line-height:1.5;}
+.listing .footer .nav{float:right;}
+.listing .footer .nav li{display:list-item;text-align:center;line-height:1.5;}
+.listing .footer .nav li a span{color:#db5b4a;font-weight:400;font-size:100%;}
+.listing .style-2 .figure{float:right;margin:0 0 130px;}
+.listing .style-2 .container{left:10px;bottom:10px;top:auto;}
+.listing .style-3 .figure{margin:40px 0 130px;}
+.listing .style-3 .container{bottom:10px;top:auto;}
+.listing .pink .content{background:#ecc1c7;}
+.listing .blue .content{background:#c0d8eb;}
+.listing .purple .content{background:#cdcaea;}
+/*********************   焦点图     ****************************/
+.banner{width:1200px;height:480px;margin:100px auto;position:relative;overflow:hidden;}
+.banner ul{z-index:2;position:relative;}
+.banner ul li{float:left;position:absolute;left:0;top:0;}
+.banner ol{position:absolute;left:520px;bottom:-30px;z-index:3;}
+.banner ol li{width:13px;height:13px;float:left;background:url(../images/01/00.png)no-repeat left top;margin-left:20px;}
+.banner ol li.current{background-position:left bottom; }
+.banner span{width:52px;height:52px;background:url(../images/01/arr.png)no-repeat left top;position:absolute;left:0px;top:50%;margin-top:-26px;z-index:4}
+.banner span.next{right:0;left:auto;background-position:right top;}
+.banner .pic{width:394px;height:480px;position:absolute;right:60px;top:0;overflow:hidden;}
+.banner .pic{background:url(../images/01/psb.jpg);}
+/**********************自我介绍*******************/
+.introduce{float:right;width:620px;}
+.introduce .header{text-align:center;}
+.introduce .header .title{padding:30px 0 35px;color:#db5b4a;font-size:3em;text-transform:uppercase;}
+.introduce .wrapper{}
+.introduce .wrapper .sub_header{width:100%;max-width:530px;padding:8px 20px 70px;background:rgba(255,255,255,0.9);}
+.introduce .wrapper .content{position:relative;width:98%;max-width:620px;padding:20px 20px 40px;margin:-60px 0 0 2%;font-size:1.1em;background:#E7DFEE;}
+.introduce .wrapper .content p{font-size:100%;font-weight:400;line-height:1.5;text-indent:2em;font-family:'SimHei','MicrosoftYaHei'}
+.introduce .wrapper .content span{color:#96F;font-size:2em;font-weight:700;}
+.introduce .wrapper .content strong{color:#F0F;font-size:1.2em;}
+.introduce .wrapper .content em{color:#F60;font-weight:bold;font-size:1.4em;}
+/******************   侧边导航         **********************************/
+.site-nav{width:120px;height:300px;border:5px solid #A3B0BB;position:fixed;top:50%;right:-130px;margin-top:-155px;z-index:10;}
+.site-nav span{width:30px;height:100px;background:#5583AD;text-align:center;position:absolute;top:50%;margin-top:-60px;left:-35px;padding:10px 0;}
+.site-nav ol{ width:100%;height:300px;overflow:hidden;}
+.site-nav ol li{width:100%;background:#EFEBE2;font-size:1.2em;font-weight:700;line-height:3;text-align:center;border-bottom:5px solid #A3B0BB;color:#FFF;}
+.site-nav ol li a{color:#DFACC0;}
+/*****************    无缝动画     ***************************/
+.all-container{width:100%;background:#000;position:relative;padding:50px 0;}
+.all{width:1200px;height:800px;margin:100px auto;position:relative;overflow:hidden;}
+.all ul{width:10000px;position:absolute;left:0;top:0;}
+.all ul li{width:600px;height:800px;overflow:hidden;float:left;cursor:pointer;}
+.all-container span{width:34px;height:60px;position:absolute;left:0;top:50%;margin-top:;background:url(../images/02/btn.png)no-repeat left top;}
+.all-container span.next{right:0;left:auto;background-position:left bottom;cursor:pointer;}
+/*****************    导航效果焦点图    ****************************/
+.all-container .nav{width:1190px;height:590px;border: 1px solid #fff;padding:10px 0 0 10px;margin:20px auto;}
+.all-container .nav li{width:287.5px;height:285px;float:left;margin:0 10px 10px 0;border: 1px solid #fff;box-sizing:border-box;background-position:center center;background-size:cover;position:relative;overflow:hidden;}
+.all-container  .nav-bg,.all-container .nav  p{width:100%;height:35%;position:absolute;right:-100%;bottom:0;}
+.nav-bg{background:#fff;}
+/*****************    多个雪花     ************************************/
+.box{width:100%;}
+.snow-wrap{position:absolute;z-index:10;top:-15px;width:100%;/*pointer-events:none;*/ }
+.snow-wrap i{position:absolute;width:6px;height:6px;background-color:#fff;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,0.15),0 0 0 3px rgba(255,255,255,0.1),0 0 0 5px rgba(255,255,255,0.05);-transform-origin:left -20px;animation:falling 12s linear 2s infinite;
+-webkit-transform-origin:left -20px;-moz-transform-origin:left -20px;-webkit-animation:falling 12s linear 2s infinite;
+-moz-animation:falling 12s linear 2s infinite;
+}
+@-moz-keyframes falling{
+	0%{
+		-moz-transform:translate3d(0,0,0) rotate(0deg);
+	}
+	100%{
+		-moz-transform:translate(0,1100px) rotate(360deg);
+	}
+}
+@-webkit-keyframes falling{
+	0%{
+		-webkit-transform:translate3d(0,0,0) rotate(0deg);
+	}
+	100%{
+		-webkit-transform:translate(0,1100px) rotate(360deg);
+	}
+}
+@keyframes falling{
+	0%{
+		transform:translate3d(0,0,0) rotate(0deg);
+	}
+	100%{
+		transform:translate(0,1100px) rotate(360deg);
+	}
+}
+.snow-wrap .snow-s{height:5px;width:5px;transform-origin:-30px 0;-webkit-transform-origin:-30px 0;-moz-transform-origin:-30px 0;}
+.snow-wrap .snow-m{height:9px;width:9px;transform-origin:left -30px;-webkit-transform-origin:left -30px;-moz-transform-origin:left -30px;}
+.snow-wrap .snow-l{height:10px;width:10px;transform-origin:left -30px;-webkit-transform-origin:left -30px;-moz-transform-origin:left -30px;}
+.snow-wrap .snow-slow{animation-duration:15s;animation-iteration-count:infinite;transform-origin:-10px -20px;-webkit-animation-duration:15s;-webkit-animation-iteration-count:infinite;-webkit-transform-origin:-10px -20px;-moz-animation-duration:15s;-moz-animation-iteration-count:infinite;-moz-transform-origin:-10px -20px;}
+.snow-wrap .snow-fast{animation-duration:9s;animation-iteration-count:infinite;transform-origin:-10px -20px;-moz-animation-duration:9s;-moz-animation-iteration-count:infinite;-moz-transform-origin:-10px -20px;-webkit-animation-duration:9s;-webkit-animation-iteration-count:infinite;-webkit-transform-origin:-10px -20px;}
+.snow-wrap .snow-delay1{-webkit-animation-delay:3.4s;-moz-animation-delay:3.4s;animation-delay:3.4s;}
+.snow-wrap .snow-delay2{-webkit-animation-delay:1.5s;-moz-animation-delay:1.5s;animation-delay:1.5s;}
+.snow-wrap .snow-delay3{-webkit-animation-delay:4.6s;-moz-animation-delay:4.6s;animation-delay:4.6s;}
+.snow-wrap .snow-delay4{-webkit-animation-delay:6.3s;-moz-animation-delay:6.3s;animation-delay:6.3s;}
+.snow-wrap .snow-delay5{-webkit-animation-delay:0.4s;-moz-animation-delay:0.4s;animation-delay:0.4s;}
+.snow-wrap .snow-delay6{-webkit-animation-delay:8.1s;-moz-animation-delay:8.1s;animation-delay:8.1s;}
+.snow-wrap .snow-fast.snow-delay2{-webkit-animation-timing-function:ease-in-out;-moz-animation-timing-function:ease-in-out;}
+.snow-wrap .snow-fast .snow-delay1{-webkit-animation-timing-function:ease-out;-moz-animation-timing-function:ease-out;animation-timing-function:ease-out;}
+/***************   悬浮的小广告    *********/
+.ad{width:130px;height:280px;background:#ccc;border: 1px solid #000;position:fixed;left:0;top:50%;margin-top:-150px;z-index:1000;padding:10px;}
+.ad_right{right:0;left:auto;}
+.ad span{width:20px;height:20px;background:#fff;text-align:center;line-height:20px;position:absolute;right:0;top:0;}
+.ad .main{font-size:18px;line-height:20px;float:left;}
+.ad .main .title{margin-bottom:10px;text-align:center;}
+.ad .main p{margin-bottom:5px;font-size:12px;}
